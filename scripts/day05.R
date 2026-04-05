@@ -20,13 +20,13 @@ tibble(depth = depth, probs = probs) %>%
   ggplot(aes(x = depth, y = probs)) +
   geom_line(color = "#2c3e50", linewidth = 1) +
   geom_point(color = "#e74c3c", size = 2) +
-  geom_hline(yintercept = .025, linetype = "dashed", alpha = 0.5) +
+  geom_hline(yintercept = .05, linetype = "dashed", alpha = 0.5) +
   scale_y_continuous(expand = c(0, 0), limits = c(0, max(probs) * 1.1)) +
   labs(y = "p-value (Binomial Test)", 
        x = "Depth",
        title = "The Effect of Depth on the Detection of Allelic Imbalance",
        subtitle = "Ratio set at 0.3") +
-  theme_minimal(base_size = 14) +
+  theme_minimal(base_size = 18) +
   theme(
     text = element_text(family = "public_sans"),
     panel.grid.minor = element_blank(),
